@@ -1,5 +1,6 @@
 :root {
-    --primary-color: #00b187;
+    --primary-color: #00c496;
+    --hover-color: #00b98e;
     --bg-white: white;
     --border-grey: #707070;
 }
@@ -34,7 +35,7 @@
         border-color: transparent
     }
     50% {
-        border-color: #707070;
+        border-color: #acacac;
     }
 }
 
@@ -73,17 +74,18 @@ a {
     display: flex;
     align-items: center;
     width: 100%;
-    margin: auto;
 }
 
 .nav-logo-content {
-    flex: 3;
+    width: 60%;
     transition: ease 0.5s;
-    padding-left: 30px;
+    padding-left: 80px;
+    transform-origin: 100px;
 }
 
 .nav-logo-content:hover {
-    transform: translateY(-3px);
+    transform: Scale(1.05);
+    /* transform: translateY(-3px); */
 }
 
 .nav-logo {
@@ -99,13 +101,13 @@ a {
 }
 
 .nav-items {
-    flex: 2;
+    width: 40%;
 }
 
 .nav-items ul {
     display: flex;
     list-style-type: none;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .nav-items ul li {
@@ -113,12 +115,13 @@ a {
     color: var(--primary-color);
     font-size: 22px;
     font-weight: 400;
+    margin: 20px;
     transition: ease 0.5s all;
 }
 
 .nav-items ul li:hover {
     font-weight: 600;
-    transform: translateY(-3px);
+    transform: Scale(1.1);
 }
 
 .nav-items ul li:active {
@@ -146,7 +149,7 @@ a {
     text-align: center;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
 }
 
 .header img {
@@ -157,7 +160,7 @@ a {
 .heading {
     font-size: 55px;
     font-weight: 700;
-    padding-top: 30px;
+    padding-top: 10px;
     text-align: center;
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
@@ -165,7 +168,7 @@ a {
     /* The typwriter cursor */
     white-space: nowrap;
     /* Keeps the content on a single line */
-    margin: 0 auto;
+    margin-top: 10px;
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: 0em;
     /* Adjust as needed */
@@ -174,7 +177,7 @@ a {
 }
 
 .heading:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 .sub-heading {
@@ -183,6 +186,11 @@ a {
     text-align: center;
     color: var(--border-grey);
     letter-spacing: 2px;
+    transition: ease 0.5s;
+}
+
+.sub-heading:hover {
+    transform: translateY(-2px);
 }
 
 .btn-learn-more {
@@ -201,7 +209,7 @@ a {
 }
 
 .btn-learn-more:hover {
-    background-color: #05AA83;
+    background-color: var(--hover-color);
     transform: translateY(2px);
 }
 
@@ -340,7 +348,7 @@ a {
 
 .why-RPA-header {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 25px;
@@ -356,7 +364,8 @@ a {
 
 .why-RPA-elements-inside {
     text-align: center;
-    width: 30%;
+    width: 400px;
+    margin: 20px;
     transition: ease 0.3s;
     padding-top: 20px;
     border-radius: 10px;
